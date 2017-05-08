@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Android UI is heirachical and consists of
+View and View Group Objects. View objects are basic UI components
+Like Buttons and text fields, and View Group are parent components
+which can have several View Objects, specifying how they are layed out
+Linear Layout is a subtypeof ViewGroup and lays out children
+components according to the orientation-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id = "@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background = "@color/sandy_brown"></android.support.v7.widget.Toolbar>
+
+    <!-- A text field, which is a type of view object
+    that belongs to it's ViewGroup parent, the LinearLayout-->
+    <EditText android:id="@+id/edit_message"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message"
+        app:backgroundTint="@color/sandy_brown"
+        android:textColor="@color/black"
+        android:textCursorDrawable="@null"/>
+    <!-- Another view object that belongs to the LinearLayout-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_send"
+            android:onClick= "calculate"
+            android:textColor="@color/black"/>
+
+        <ToggleButton android:id="@+id/working_on_off"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textOn="@string/show_working"
+            android:textOff="@string/do_not_show_working"
+            android:textColor="@color/black"
+            android:buttonTint="@color/sandy_brown"/>
+
+    </LinearLayout>
+
+
+    <!--Radio Buttons to allow the user to select the type of
+     calculation they want to perform:-->
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation = "vertical">
+
+        <RadioButton android:id = "@+id/calculate_mean"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "@string/calculate_mean"
+            android:onClick= "radioButtonSelected"
+            app:buttonTint="@color/sandy_brown"
+            />
+
+        <RadioButton android:id = "@+id/calculate_variance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "@string/calculate_variance"
+            android:onClick="radioButtonSelected"
+            app:buttonTint="@color/sandy_brown"
+            />
+
+        <RadioButton android:id = "@+id/calculate_standard_deviation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "@string/calculate_standard_deviation"
+            android:onClick="radioButtonSelected"
+            app:buttonTint="@color/sandy_brown"
+            />
+        
+        <RadioButton android:id="@+id/calculate_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/calculate_range"
+            android:onClick="radioButtonSelected"
+            app:buttonTint="@color/sandy_brown"
+            />
+
+        <RadioButton
+            android:id = "@+id/calculate_median"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "@string/calculate_median"
+            android:onClick = "radioButtonSelected"
+            app:buttonTint="@color/sandy_brown"
+            />
+
+        <RadioButton
+            android:id="@+id/calculate_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "@string/calculate_mode"
+            android:onClick = "radioButtonSelected"
+            app:buttonTint="@color/sandy_brown"
+            />
+
+        <RadioButton
+            android:id="@+id/calculate_lq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "@string/calculate_lower_quartile"
+            android:onClick = "radioButtonSelected"
+            app:buttonTint="@color/sandy_brown"
+           />
+
+        <RadioButton
+            android:id="@+id/calculate_uq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "@string/calculate_upper_quartile"
+            android:onClick = "radioButtonSelected"
+            app:buttonTint="@color/sandy_brown"
+            />
+
+    </RadioGroup>
+
+
+</LinearLayout>

@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Stats Speak</string>
+    <string name="edit_message"> Enter a sequence of numbers (separated by one space or more)... </string>
+    <string name="button_send"> Calculate </string>
+    <string name="button_speak"> Speak Numbers </string>
+
+    <string name="clear_all">Clear</string>
+    <string name="toggle_working">Toggle Working</string>
+
+    <string name="share">Share</string>
+    <string name="prev">Prev</string>
+    <string name="next">Next</string>
+    <string name="voice"></string>
+    <string name="app_info">Info</string>
+
+    <string name="show_working">Working On</string>
+    <string name="do_not_show_working">Working Off</string>
+
+
+    <color name="orange">#FF8C00</color>
+    <color name="sandy_brown">#F4A460</color>
+
+    <!-- For the radio buttons:-->
+    <string name="calculate_mean"> Calculate Mean </string>
+    <string name="calculate_variance"> Calculate Variance </string>
+    <string name="calculate_standard_deviation"> Calculate Standard Deviation</string>
+    <string name="calculate_median">Calculate Median</string>
+    <string name="calculate_range">Calculate Range (Shows min and max)</string>
+    <string name="calculate_mode">Calculate Mode (And Frequency Analysis)</string>
+    <string name="calculate_lower_quartile">Calculate Lower Quartile</string>
+    <string name="calculate_upper_quartile">Calculate Upper Quartile</string>
+
+
+</resources>
